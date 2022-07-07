@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/d_bottom_gray_line">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_6sdp"
+                    android:src="@drawable/ic_arrow_back_black_24dp"
+                    app:tint="@color/white" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_toRightOf="@+id/back"
+                    android:src="@drawable/profile" />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_toRightOf="@+id/profile_image"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Name"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/alert_btn"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_not_send_message"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedscroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:id="@+id/chat_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/toolbar"
+                android:visibility="visible">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/chatlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/typeindicator"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"></androidx.recyclerview.widget.RecyclerView>
+
+                <include
+                    android:id="@+id/chatmenu"
+                    layout="@layout/chat_menu_layout"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+                    android:id="@+id/typeindicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/writechatlayout"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/ic_type_indicator"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/gif_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_above="@+id/writechatlayout"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/gif_recylerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/writechatlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/editfield_releative_border">
+
+
+                    <ImageButton
+                        android:id="@+id/mic_btn"
+                        android:layout_width="35dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:background="@color/transparent"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="3dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_mic_fill" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/more"
+                        android:layout_toRightOf="@+id/mic_btn"
+                        android:background="@drawable/top_bottom_border_line">
+
+                        <EditText
+                            android:id="@+id/msgedittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/_20sdp"
+                            android:layout_toLeftOf="@+id/sendbtn"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="Send Message Here..."
+                            android:imeOptions="actionDone"
+                            android:inputType="textCapSentences"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray"
+                            android:textSize="14sp" />
+
+                        <ImageButton
+                            android:id="@+id/upload_gif_btn"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/transparent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_gif_image_gray"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/sendbtn"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:padding="6dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_send"
+                            android:text="Send"
+                            app:tint="@color/dark_gray2" />
+                    </RelativeLayout>
+
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:backgroundTint="@color/purple_200"
+                        android:src="@drawable/ic_add"
+                        android:tintMode="@color/white"
+                        app:fabCustomSize="@dimen/_30sdp"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>
+

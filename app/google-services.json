@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "49101797605",
+    "firebase_url": "https://abhiapp-c91e1-default-rtdb.firebaseio.com",
+    "project_id": "abhiapp-c91e1",
+    "storage_bucket": "abhiapp-c91e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:49101797605:android:73e5dc98c1770fae91fc0c",
+        "android_client_info": {
+          "package_name": "com.app.shoban"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "49101797605-q9lc110smtvmjm5mo5nbthmsfdfmp9im.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDH_LkTlJbq1M0QF2GtEb2QdSMqMNbWl7E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "49101797605-q9lc110smtvmjm5mo5nbthmsfdfmp9im.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:49101797605:android:9199dc3a6e3c294b91fc0c",
+        "android_client_info": {
+          "package_name": "com.dhoni.abhii"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "49101797605-agbkkrk5n0rsicnbuhvf8u4od9c84ij6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dhoni.abhii",
+            "certificate_hash": "ce4f937b16de7430443b5bd7f692a8f880ccc5de"
+          }
+        },
+        {
+          "client_id": "49101797605-q9lc110smtvmjm5mo5nbthmsfdfmp9im.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDH_LkTlJbq1M0QF2GtEb2QdSMqMNbWl7E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "49101797605-q9lc110smtvmjm5mo5nbthmsfdfmp9im.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

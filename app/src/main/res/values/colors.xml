@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#90CAF9</color>
+    <color name="purple_500">#2196F3</color>
+
+    <color name="purple_700">#1976D2</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="themecolor">#feeb04</color>
+    <color name="colorUserMain">#2196F3</color>
+    <color name="blue">#2196F3</color>
+    <color name="gray">#9f9f9f</color>
+    <color name="lightgray">#A9D3D1D1</color>
+    <color name="lightgray2">#c9c9c9</color>
+    <color name="layout_bg_lightgray">#dddddd</color>
+    <color name="dark_gray">#888888</color>
+    <color name="dark_gray2">#393e46</color>
+    <color name="yellow">#ffe103</color>
+    <color name="gray3">#78777b</color>
+    <color name="accent2">#393e46</color>
+    <color name="pinkishgray">#c9c9c9</color>
+    <color name="secondary">#002651</color>
+    <color name="warm_gray_two">#939393</color>
+    <color name="white_three">#d7d7d7</color>
+    <color name="white_four">#e3e3e3</color>
+    <color name="slate_gray">#58616a</color>
+    <color name="black37">#4D000000</color>
+    <color name="delete_message_bg">#f2f2f2</color>
+    <color name="transparent_color">#00000000</color>
+    <color name="transparent">#04fefeff</color>
+    <color name="darkgray">#3E3D3D</color>
+    <color name="delete_message_text">#b8b8b8</color>
+    <color name="gainsboro">#DCDCDC</color>
+    <color name="black20">#99000000</color>
+    <color name="dusk">#4c477d</color>
+    <color name="dusk2">#3f3d56</color>
+    <color name="white5">#f3f1f1</color>
+    <color name="warmgrayfour">#7e7979</color>
+    <color name="green">#388E3C</color>
+    <color name="red">#D32F2F</color>
+
+
+</resources>

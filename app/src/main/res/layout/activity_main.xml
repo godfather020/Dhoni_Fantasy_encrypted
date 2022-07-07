@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:text="Welcome To fantasy"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:layout_marginBottom="45dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_width="338dp"
+        android:layout_height="336dp" />
+
+    <Button
+        android:id="@+id/btnUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="User"
+        android:textColor="@android:color/black"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:text="Admin"
+        android:textStyle="bold" />
+
+</LinearLayout>

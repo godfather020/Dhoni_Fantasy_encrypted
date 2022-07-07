@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Add Member" android:id="@+id/addmember" app:showAsAction="never"></item>
+    <item android:title="Remove Member" android:id="@+id/removemember" app:showAsAction="never"></item>
+    <item android:title="Turn off chat" android:id="@+id/turnoffchat" app:showAsAction="never"></item>
+    <item android:title="Turn on chat" android:id="@+id/turnonchat" app:showAsAction="never" android:visible="false"></item>
+    <item android:title="Delete Chat" android:id="@+id/deletechat" app:showAsAction="never"></item>
+    <item android:title="Delete Group" android:id="@+id/deletegroup" app:showAsAction="never"></item>
+    <item android:title="Create group" android:id="@+id/main_create_group" app:showAsAction="never" android:visible="false"></item>
+</menu>

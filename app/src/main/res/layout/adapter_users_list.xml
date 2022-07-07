@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvUserAdapterUserName"
+            android:text="Dharaneesh (Admin)"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@android:color/black"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dharaneesh@gmail.com"
+            android:fontFamily="sans-serif"
+            android:id="@+id/tvUserAdapterEmailId"
+            android:textColor="#B3000000"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="7dp"
+        android:id="@+id/ivadd"
+        android:visibility="gone"
+        android:src="@drawable/ic_add"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="7dp"
+        android:id="@+id/ivsub"
+        android:visibility="gone"
+        android:src="@drawable/ic_remove"/>
+
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="7dp"
+        android:id="@+id/ivchat"
+        android:src="@drawable/ic_chat"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="7dp"
+        android:id="@+id/ivApproveUser"
+        android:src="@drawable/ic_done"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/ivDeleteUser"
+        android:src="@drawable/ic_delete"/>
+
+</LinearLayout>

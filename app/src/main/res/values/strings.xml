@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Abhi Rocking Teams</string>
+    <string name="type_a_message">Type message</string>
+    <string name="action_settings">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_notification_channel_id">default</string>
+    <!--<string name="web_client_id">934445575249-3jhc7a94kmrao86svs4h1iqppd9anfse.apps.googleusercontent.com</string>-->
+    <string name="web_client_id">49101797605-q9lc110smtvmjm5mo5nbthmsfdfmp9im.apps.googleusercontent.com</string>
+</resources>

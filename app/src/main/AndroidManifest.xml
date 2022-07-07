@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.app.dharaneesh"
+    android:installLocation="preferExternal">
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <queries>
+        <package android:name="net.one97.paytm" />
+        <package android:name="com.phonepe.app" />
+        <package android:name="com.google.android.apps.nbu.paisa.user" />
+    </queries>
+
+    <application
+        android:name=".util.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/abhi_app_icon"
+        android:label="Abhi Rocking Teams"
+        android:roundIcon="@drawable/abhi_app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DhoniFantasy"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".PaymentPackageDetailsAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentDetailsAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".PendingUsersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PendingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".chatUi.ChatActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".support.addmember"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".support.groupmessagescreen"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".support.messagescreen"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".support.chatlistactivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".StaticSubsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SubscriptionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UpdateGlActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GLUploadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ShowGlMatchActivity"
+            android:screenOrientation="portrait" /> <!-- <service -->
+        <!-- android:name=".notification.FirebaseMessageReceiver" -->
+        <!-- android:permission="com.google.android.c2dm.permission.SEND"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.MESSAGING_EVENT" /> -->
+        <!-- <action android:name="com.google.android.c2dm.intent.RECEIVE" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <activity
+            android:name=".UserListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserDashboardActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ShowMatchAdminActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AdminDashActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ShowInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserCreateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PostUploadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OpenDataActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@xml/provider_paths" />
+
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service
+            android:name=".notification.MyFirebaseMessaging"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".futureUploadService.MyService"
+            android:exported="true"
+            android:isolatedProcess="true"
+            android:process=":MYPROCESS"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="ACTION_START_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".futureUploadService.BootReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:label="BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".util.NotificationActivity" />
+
+        <receiver android:name=".util.AlarmReceiver" />
+    </application>
+
+</manifest>
